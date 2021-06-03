@@ -1,10 +1,8 @@
 import React from 'react';
 import * as PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
-import Img from 'gatsby-image';
-import { rhythm } from '../utils/typography';
 
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 
 const propTypes = {
   data: PropTypes.object.isRequired,
@@ -12,7 +10,7 @@ const propTypes = {
 
 class IndexPage extends React.Component {
   render() {
-    const edges = this.props.data.us.edges;
+    const edges = this.props.data?.us?.edges || [];
 
     return (
       <Layout
@@ -39,41 +37,7 @@ export const pageQuery = graphql`
     us: allContentfulLandingPage(filter: { node_locale: { eq: "en-US" } }) {
       edges {
         node {
-          id
-          contentful_id
-          node_locale
-          siteName
-          moto
-          callout: childContentfulLandingPageCalloutTextNode {
-            childMarkdownRemark {
-              html
-            }
-          }
-          siteDescription {
-            siteDescription
-          }
-          description: childContentfulLandingPageDescriptionTextNode {
-            childMarkdownRemark {
-              html
-            }
-          }
-          features {
-            name
-            description {
-              childMarkdownRemark {
-                html
-              }
-            }
-          }
-          aspects {
-            name
-            description {
-              childMarkdownRemark {
-                html
-              }
-            }
-          }
-          appLinkContent
+          ...allData
         }
       }
     }

@@ -1,35 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from 'gatsby-link';
 import { FormattedMessage } from 'react-intl';
+import ToggleButton from './ToggleButton';
+import Button from './Button';
 
-const SelectLanguage = (props) => {
-  const links = props.langs.map(lang =>
-    <Link to={lang.link} key={lang.langKey} style={{
-      color: 'white'
-    }}>
-      <li selected={lang.selected}>
+const SelectLanguage = ({ className, langs }) => {
+  const links = langs
+    ?.filter((lang) => !lang.selected)
+    .map((lang) => (
+      <Button
+        className={className}
+        size="fluid"
+        link={lang.link}
+        key={lang.langKey}>
         {lang.langKey}
-      </li>
-    </Link>
-  );
+      </Button>
+    ));
 
-  return (
-    <section>
-      <header style={{
-        color: 'white'
-      }}>
-        <FormattedMessage id="selectLanguage" />
-      </header>
-      <ul>
-        {links}
-      </ul>
-    </section>
-  );
+  return <>{links}</>;
 };
 
 SelectLanguage.propTypes = {
-  langs: PropTypes.array
+  langs: PropTypes.array,
 };
 
 export default SelectLanguage;

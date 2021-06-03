@@ -1,9 +1,10 @@
 const languages = require('./src/data/languages');
+const theme = require('./src/theme/theme');
 
 module.exports = {
   siteMetadata: {
     title: `Gatsby with Contentful`,
-    languages
+    languages,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -12,8 +13,8 @@ module.exports = {
       options: {
         langKeyForNull: 'any',
         langKeyDefault: languages.defaultLangKey,
-        useLangKeyLayout: false
-      }
+        useLangKeyLayout: false,
+      },
     },
     {
       resolve: `gatsby-source-contentful`,
@@ -29,5 +30,9 @@ module.exports = {
       },
     },
     `gatsby-transformer-remark`,
+    {
+      resolve: 'gatsby-plugin-jss',
+      options: { theme },
+    },
   ],
-}
+};
