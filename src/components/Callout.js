@@ -5,7 +5,7 @@ import { Link } from 'gatsby';
 
 function Callout({ appLink, callout, appLinkContent }) {
   return (
-    <section>
+    <section id="#get-started">
       <RichText text={callout} />
       <Link to={appLink}>{appLinkContent}</Link>
     </section>

@@ -64,6 +64,7 @@ function Layout(props) {
           moto={content.moto}
           mainImageLayers={content.mainImageLayers}
           appLinkContent={content.appLinkContent}
+          appLink={content.appLink}
         />
         <Description description={content.description} />
         <Features features={content.features} />
@@ -72,6 +73,7 @@ function Layout(props) {
           appLink={content.appLink}
           callout={content.callout}
           appLinkContent={content.appLinkContent}
+          appLink={content.appLink}
         />
         {children}
       </div>

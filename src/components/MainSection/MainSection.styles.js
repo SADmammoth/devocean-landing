@@ -19,6 +19,7 @@ const styles = {
   },
   logo: {
     width: '100%',
+    marginLeft: '-30px',
   },
   branding: {
     width: '40%',
@@ -26,7 +27,6 @@ const styles = {
   moto: {
     fontSize: '1.1rem',
     fontWeight: 'normal',
-    marginLeft: '10%',
   },
 };
 

@@ -14,7 +14,14 @@ import Img from 'gatsby-image';
 
 const useStyles = createUseStyles(styles);
 
-function MainSection({ langs, logo, moto, mainImageLayers, appLinkContent }) {
+function MainSection({
+  langs,
+  logo,
+  moto,
+  mainImageLayers,
+  appLinkContent,
+  appLink,
+}) {
   const theme = useTheme();
   const classes = useStyles(theme);
   console.log(appLinkContent);
@@ -42,7 +49,7 @@ function MainSection({ langs, logo, moto, mainImageLayers, appLinkContent }) {
           <img className={classes.logo} src={logo?.file?.url} />
           <h1 className={classes.moto}>{moto}</h1>
         </div>
-        <Button size="fluid" link="#get-started">
+        <Button size="fluid" link={appLink} external>
           {appLinkContent}
         </Button>
       </div>

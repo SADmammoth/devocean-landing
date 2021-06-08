@@ -51,5 +51,6 @@ export const query = graphql`
       }
     }
     appLinkContent
+    appLink
   }
 `;

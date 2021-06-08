@@ -19,10 +19,23 @@ const Button = ({
   size,
   label,
   props,
+  external,
 }) => {
   const theme = useTheme();
   const classes = useStyles(theme);
 
+  if (link && external) {
+    return (
+      <a
+        href={link}
+        type={type}
+        className={classNames(className, classes.button, classes[sizes[size]])}
+        aria-label={label}
+        {...props}>
+        {children}
+      </a>
+    );
+  }
   if (link) {
     return (
       <Link

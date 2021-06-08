@@ -30,5 +30,6 @@ export default {
     width: '55%',
     bottom: 0,
     right: 0,
+    transform: 'scaleX(-1)',
   }),
 };
