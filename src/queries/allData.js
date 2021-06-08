@@ -21,6 +21,12 @@ export const query = graphql`
         ...GatsbyContentfulFluid
       }
     }
+    descriptionImages {
+      title
+      fluid(maxWidth: 980) {
+        ...GatsbyContentfulFluid
+      }
+    }
     callout: childContentfulLandingPageCalloutTextNode {
       childMarkdownRemark {
         html
@@ -43,6 +49,12 @@ export const query = graphql`
       }
     }
     aspects {
+      image {
+        title
+        fluid(maxWidth: 980) {
+          ...GatsbyContentfulFluid
+        }
+      }
       name
       description {
         childMarkdownRemark {
@@ -52,5 +64,11 @@ export const query = graphql`
     }
     appLinkContent
     appLink
+    featuresImage {
+      title
+      fluid(maxWidth: 980) {
+        ...GatsbyContentfulFluid
+      }
+    }
   }
 `;

@@ -2,15 +2,15 @@ export default {
   Sky: (fluid) => ({
     position: 'absolute',
     zIndex: 101,
-    height: '70vh',
+    height: '100%',
     width: '100%',
     boxSizing: 'borderBox',
   }),
   Ship: (fluid) => ({
     position: 'absolute',
     zIndex: 103,
-    height: '50vh',
-    width: 50 * fluid.aspectRatio + 'vh',
+    height: '60vh',
+    width: 60 * fluid.aspectRatio + 'vh',
     left: '43%',
     bottom: '13vh',
   }),

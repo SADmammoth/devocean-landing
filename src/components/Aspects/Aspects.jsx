@@ -11,9 +11,14 @@ function Aspects({ aspects }) {
   const classes = useStyles(theme);
 
   return (
-    <section style={{ display: 'flex' }}>
-      {aspects.map(({ name, description }) => (
-        <Aspect classes={classes} name={name} description={description} />
+    <section className={classes.section}>
+      {aspects.map(({ image, name, description }) => (
+        <Aspect
+          classes={classes}
+          image={image}
+          name={name}
+          description={description}
+        />
       ))}
     </section>
   );

@@ -9,7 +9,7 @@ module.exports = {
   background: {
     shadows: '#c4c4c4',
     dark: '#EAEAEA',
-    common: '#F9F9F9',
+    common: '#f0f4f6',
     light: '#ffffff',
     button: '#1476B8',
     secondaryButton: '#8eb4cd',
@@ -19,10 +19,6 @@ module.exports = {
   },
   shadows: {
     card: `0 0 4px #e4e4e4`,
-  },
-  '@global': {
-    fontFamily: 'SF Pro Display',
-    fontSize: '19px',
   },
   noTypeList: {
     listStyleType: 'none',

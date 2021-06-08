@@ -1,19 +1,19 @@
 const styles = {
   mainSection: {
     position: 'relative',
-    height: '70vh',
+    height: '99vh',
   },
   content: {
     position: 'absolute',
     zIndex: 102,
-    height: '70vh',
+    height: '100%',
     width: '45%',
     background: (theme) => theme.background.light,
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: '2vh 0 13vh 0',
+    padding: '5vh 0 20vh 0',
     textAlign: 'center',
     color: (theme) => theme.text.common,
   },

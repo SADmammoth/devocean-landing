@@ -11,6 +11,7 @@ import { useTheme, createUseStyles } from 'react-jss';
 import styles from './MainSection.styles';
 
 import Img from 'gatsby-image';
+import Text from '../Text';
 
 const useStyles = createUseStyles(styles);
 
@@ -47,7 +48,9 @@ function MainSection({
         />
         <div className={classes.branding}>
           <img className={classes.logo} src={logo?.file?.url} />
-          <h1 className={classes.moto}>{moto}</h1>
+          <Text type="common" as="h1" className={classes.moto}>
+            {moto}
+          </Text>
         </div>
         <Button size="fluid" link={appLink} external>
           {appLinkContent}

@@ -7,6 +7,7 @@ import sizes from './sizes';
 import Link from 'gatsby-link';
 
 import styles from './Button.styles';
+import Text from '../Text';
 
 const useStyles = createUseStyles(styles);
 
@@ -26,38 +27,44 @@ const Button = ({
 
   if (link && external) {
     return (
-      <a
+      <Text
+        type="common"
+        as="a"
         href={link}
         type={type}
         className={classNames(className, classes.button, classes[sizes[size]])}
         aria-label={label}
         {...props}>
         {children}
-      </a>
+      </Text>
     );
   }
   if (link) {
     return (
-      <Link
+      <Text
+        type="common"
+        as={Link}
         to={link}
         type={type}
         className={classNames(className, classes.button, classes[sizes[size]])}
         aria-label={label}
         {...props}>
         {children}
-      </Link>
+      </Text>
     );
   }
 
   return (
-    <button
+    <Text
+      type="common"
+      as="button"
       type={type}
       className={classNames(className, classes.button, classes[sizes[size]])}
       onClick={onClick}
       aria-label={label}
       {...props}>
       {children}
-    </button>
+    </Text>
   );
 };
 

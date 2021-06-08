@@ -38,7 +38,7 @@
     "contentful": "6.1.0"
   },
   "scripts": {
-    "develop": "gatsby develop -p 8002",
+    "develop": "set ENABLE_GATSBY_REFRESH_ENDPOINT=true&& gatsby develop -p 8002",
     "build": "gatsby build",
     "start": "gatsby serve"
   }

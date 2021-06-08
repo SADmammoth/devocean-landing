@@ -66,9 +66,15 @@ function Layout(props) {
           appLinkContent={content.appLinkContent}
           appLink={content.appLink}
         />
-        <Description description={content.description} />
-        <Features features={content.features} />
+        <Description
+          description={content.description}
+          descriptionImages={content.descriptionImages}
+        />
         <Aspects aspects={content.aspects} />
+        <Features
+          featuresImage={content.featuresImage}
+          features={content.features}
+        />
         <Callout
           appLink={content.appLink}
           callout={content.callout}
