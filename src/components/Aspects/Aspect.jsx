@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 
 function Aspect({ classes, image, name, description }) {
   return (
-    <article className={classes.aspect}>
+    <article id="aspects" className={classes.aspect}>
       {!image || (
         <Img
           className={classes.image}

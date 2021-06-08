@@ -17,7 +17,7 @@ function Callout({ calloutBackground, appLink, callout, appLinkContent }) {
   const classes = useStyles(theme);
 
   return (
-    <section id="#get-started" className={classes.section}>
+    <section id="get-started" className={classes.section}>
       <div className={classes.background}>
         <Img
           fluid={calloutBackground.fluid}

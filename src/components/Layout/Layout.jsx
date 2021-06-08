@@ -49,7 +49,7 @@ function Layout(props) {
   console.log(content, content.appLinkContent);
   return (
     <IntlProvider locale={langKey} messages={i18nMessages}>
-      <div>
+      <div className={classes.layout}>
         <Helmet
           title="Gatsby Default Starter"
           meta={[
@@ -60,6 +60,7 @@ function Layout(props) {
 
         <MainSection
           langs={langsMenu}
+          langKey={langKey}
           logo={content.logo}
           moto={content.moto}
           mainImageLayers={content.mainImageLayers}

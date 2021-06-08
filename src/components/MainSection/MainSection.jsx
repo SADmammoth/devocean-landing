@@ -17,6 +17,7 @@ const useStyles = createUseStyles(styles);
 
 function MainSection({
   langs,
+  langKey,
   logo,
   moto,
   mainImageLayers,
@@ -32,15 +33,15 @@ function MainSection({
         <Header
           navItems={[
             {
-              link: '#about',
+              link: '/' + langKey + '#about',
               label: 'About',
             },
             {
-              link: '#aspects',
+              link: '/' + langKey + '#aspects',
               label: 'Aspects',
             },
             {
-              link: '#features',
+              link: '/' + langKey + '#features',
               label: 'Features',
             },
           ]}

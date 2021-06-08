@@ -20,7 +20,7 @@ function Description({ description, descriptionImages }) {
   const [compass, todo] = descriptionImages;
 
   return (
-    <section className={classes.section}>
+    <section id="about" className={classes.section}>
       <Img
         fluid={compass.fluid}
         key={compass.fluid.src}

@@ -14,7 +14,7 @@ function Features({ featuresImage, features }) {
   const classes = useStyles(theme);
 
   return (
-    <section className={classes.section}>
+    <section id="features" className={classes.section}>
       <div className={classes.imageContainer}>
         {!featuresImage || (
           <Img

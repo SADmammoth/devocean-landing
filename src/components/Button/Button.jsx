@@ -3,6 +3,7 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { useTheme, createUseStyles } from 'react-jss';
+
 import sizes from './sizes';
 import Link from 'gatsby-link';
 
