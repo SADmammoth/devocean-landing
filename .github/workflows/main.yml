@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch:
 
 jobs:
   build:
@@ -15,4 +16,4 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "devocean-landing" #Must be unique in Heroku
           heroku_email: "lo.ma200018@gmail.com"
-          healthcheck: "http://devocean-landing.herokuapp.com"
+          healthcheck: "https://devocean-landing.herokuapp.com/en-US/"
