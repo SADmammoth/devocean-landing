@@ -6,6 +6,11 @@ module.exports = {
     title: `Gatsby with Contentful`,
     languages,
   },
+  flags: {
+    DEV_SSR: false,
+    PRESERVE_WEBPACK_CACHE: false,
+    PARALLEL_SOURCING: false,
+  },
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
