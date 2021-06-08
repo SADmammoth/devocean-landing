@@ -10,7 +10,10 @@ function SiteHelmet({ title, description, keyWords, favicon, ogImage }) {
       title={title}
       meta={[
         { property: 'og:image', content: ogImage?.file.url },
-        { name: 'description', content: description.rawMarkdownBody },
+        {
+          name: 'description',
+          content: description.childMarkdownRemark.rawMarkdownBody,
+        },
         { name: 'keywords', content: keyWords.join(',') },
       ]}
       link={[{ rel: 'icon', type: 'image/svg', href: favicon.file.url }]}
