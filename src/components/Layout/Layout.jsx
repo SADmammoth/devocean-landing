@@ -1,9 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { useTheme, createUseStyles } from 'react-jss';
 import styles from './Layout.styles';
-import Header from '../Header';
-import Helmet from 'react-helmet';
 import { getCurrentLangKey, getLangs, getUrlForLang } from 'ptz-i18n';
 import { IntlProvider, addLocaleData } from 'react-intl';
 import MainSection from '../MainSection';
@@ -11,6 +8,7 @@ import Description from '../Description';
 import Features from '../Features';
 import Aspects from '../Aspects';
 import Callout from '../Callout';
+import SiteHelmet from '../SiteHelmet';
 
 import 'intl';
 
@@ -50,14 +48,12 @@ function Layout(props) {
   return (
     <IntlProvider locale={langKey} messages={i18nMessages}>
       <div className={classes.layout}>
-        <Helmet
-          title="Gatsby Default Starter"
-          meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
-          ]}
+        <SiteHelmet
+          title={content.siteName}
+          keyWords={content.keyWords}
+          description={content.siteDescription}
+          favicon={content.favicon}
         />
-
         <MainSection
           langs={langsMenu}
           langKey={langKey}

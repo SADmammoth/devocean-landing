@@ -76,5 +76,6 @@ export const query = graphql`
         ...GatsbyContentfulFluid
       }
     }
+    keyWords
   }
 `;
