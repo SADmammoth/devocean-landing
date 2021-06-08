@@ -37,8 +37,10 @@ export const query = graphql`
         html
       }
     }
-    siteDescription {
-      siteDescription
+    siteDescription: childContentfulLandingPageSiteDescriptionTextNode {
+      childMarkdownRemark {
+        rawMarkdownBody
+      }
     }
     description: childContentfulLandingPageDescriptionTextNode {
       childMarkdownRemark {
