@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useTheme, createUseStyles } from 'react-jss';
+import ReactHtmlParser from 'react-html-parser';
+
 import styles from './RichTextAbstracts.styles';
 import Text from '../Text';
 
@@ -13,10 +15,9 @@ function RichTextAbstracts({ type, className, abstractClassName, text }) {
   return (
     <div className={className}>
       {text.childMarkdownRemark.html.split('\n').map((abstract) => (
-        <Text
-          type={type || 'common'}
-          className={abstractClassName}
-          dangerouslySetInnerHTML={{ __html: abstract }}></Text>
+        <Text type={type || 'common'} className={abstractClassName}>
+          {ReactHtmlParser(abstract)}
+        </Text>
       ))}
     </div>
   );
