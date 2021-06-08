@@ -1,10 +1,8 @@
 import React from 'react';
-
-import RichText from './RichText';
-
 import PropTypes from 'prop-types';
+import RichText from '../RichText';
 
-function Aspect({ name, description }) {
+function Feature({ name, description }) {
   return (
     <article>
       <header>
@@ -15,6 +13,6 @@ function Aspect({ name, description }) {
   );
 }
 
-Aspect.propTypes = {};
+Feature.propTypes = {};
 
-export default Aspect;
+export default Feature;
