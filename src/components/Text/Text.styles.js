@@ -17,28 +17,28 @@ const styles = {
     fontFamily: 'SF Pro Display',
   },
   common: {
-    ...scale(1),
+    ...scale(0),
   },
   h1: {
-    ...scale(2),
+    ...scale(1),
   },
   h1Small: {
-    ...scale(1.47),
+    ...scale(0.47),
   },
   h2: {
-    ...scale(1.47),
+    ...scale(0.47),
   },
   h3: {
-    ...scale(1.36),
+    ...scale(0.36),
   },
   h4: {
-    ...scale(1.36),
+    ...scale(0.36),
   },
   sub: {
-    ...scale(1.47),
+    ...scale(0.47),
   },
   subSmall: {
-    ...scale(1),
+    ...scale(0),
   },
   hint: {
     ...scale(0.74),
@@ -50,7 +50,7 @@ const styles = {
     ...scale(0.84),
   },
   big: {
-    ...scale(1.36),
+    ...scale(0.9),
   },
   bold: {
     fontWeight: 'bold',

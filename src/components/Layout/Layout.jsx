@@ -76,6 +76,7 @@ function Layout(props) {
           features={content.features}
         />
         <Callout
+          calloutBackground={content.calloutBackground}
           appLink={content.appLink}
           callout={content.callout}
           appLinkContent={content.appLinkContent}

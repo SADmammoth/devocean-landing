@@ -70,5 +70,11 @@ export const query = graphql`
         ...GatsbyContentfulFluid
       }
     }
+    calloutBackground {
+      title
+      fluid(maxWidth: 980) {
+        ...GatsbyContentfulFluid
+      }
+    }
   }
 `;

@@ -2,14 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Text from './Text';
 
-function RichText({ className, text }) {
+function RichText({ className, text, ...props }) {
   return (
     <Text
       type="common"
       className={className}
       dangerouslySetInnerHTML={{
         __html: text.childMarkdownRemark.html,
-      }}></Text>
+      }}
+      {...props}></Text>
   );
 }
 

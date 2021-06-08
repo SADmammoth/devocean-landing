@@ -6,7 +6,7 @@ import Text from '../Text';
 
 const useStyles = createUseStyles(styles);
 
-function RichTextAbstracts({ className, abstractClassName, text }) {
+function RichTextAbstracts({ type, className, abstractClassName, text }) {
   const theme = useTheme();
   const classes = useStyles(theme);
 
@@ -14,7 +14,7 @@ function RichTextAbstracts({ className, abstractClassName, text }) {
     <div className={className}>
       {text.childMarkdownRemark.html.split('\n').map((abstract) => (
         <Text
-          type="common"
+          type={type || 'common'}
           className={abstractClassName}
           dangerouslySetInnerHTML={{ __html: abstract }}></Text>
       ))}

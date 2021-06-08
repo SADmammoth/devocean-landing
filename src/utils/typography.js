@@ -5,10 +5,10 @@ import {
 } from 'typography-breakpoint-constants';
 
 const theme = {
-  baseFontSize: `20px`,
+  baseFontSize: `18px`,
   baseLineHeight: 1.45,
   blockMarginBottom: 0.75,
-  scaleRatio: 1,
+  scaleRatio: 2,
   overrideStyles: ({ rhythm, scale }, options) => {
     return {
       'h1,h2,h3,h4': {

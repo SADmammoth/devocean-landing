@@ -2,7 +2,7 @@ const styles = {
   section: {
     display: 'flex',
     background: (theme) => theme.background.common,
-    height: '50vh',
+    height: '60vh',
     alignItems: 'center',
   },
   features: {
