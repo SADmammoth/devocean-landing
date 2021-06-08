@@ -53,6 +53,7 @@ function Layout(props) {
           keyWords={content.keyWords}
           description={content.siteDescription}
           favicon={content.favicon}
+          ogImage={content.ogImage}
         />
         <MainSection
           langs={langsMenu}

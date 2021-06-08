@@ -15,6 +15,11 @@ export const query = graphql`
     node_locale
     siteName
     moto
+    ogImage {
+      file {
+        url
+      }
+    }
     mainImageLayers {
       title
       fluid(maxWidth: 980) {
