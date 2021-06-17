@@ -26,6 +26,7 @@ const styles = {
     flexGrow: '1',
     display: 'flex',
     justifyContent: 'center',
+    transform: 'scaleX(-1)',
   },
 };
 

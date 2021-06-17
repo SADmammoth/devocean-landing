@@ -31,7 +31,13 @@ function Callout({ calloutBackground, appLink, callout, appLinkContent }) {
           className={classes.callout}
           text={callout}
         />
-        <Button to={appLink}>{appLinkContent}</Button>
+        <Button
+          className={classes.appLink}
+          size="fluid"
+          link={'http://localhost:8000'}
+          external>
+          {appLinkContent}
+        </Button>
       </div>
     </section>
   );

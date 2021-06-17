@@ -53,7 +53,11 @@ function MainSection({
             {moto}
           </Text>
         </div>
-        <Button size="fluid" link={appLink} external>
+        <Button
+          className={classes.appLink}
+          size="fluid"
+          link={appLink}
+          external>
           {appLinkContent}
         </Button>
       </div>

@@ -5,7 +5,7 @@ import {
 } from 'typography-breakpoint-constants';
 
 const theme = {
-  baseFontSize: `18px`,
+  baseFontSize: `20px`,
   baseLineHeight: 1.45,
   blockMarginBottom: 0.75,
   scaleRatio: 2,

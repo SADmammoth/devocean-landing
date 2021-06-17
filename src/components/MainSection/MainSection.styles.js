@@ -28,6 +28,7 @@ const styles = {
     fontSize: '1.1rem',
     fontWeight: 'normal',
   },
+  appLink: {},
 };
 
 export default styles;

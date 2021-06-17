@@ -26,6 +26,7 @@ const styles = {
     flexDirection: 'column',
     textAlign: 'center',
   },
+  appLink: {},
 };
 
 export default styles;
